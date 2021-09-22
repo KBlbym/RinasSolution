@@ -1,0 +1,27 @@
+﻿@model RinasWeb.ModelsView.PerfumeModelView
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<partial name="Components/_Hero" />
+<partial name="Components/_Heading" />
+@*@await Html.PartialAsync("Components/_Card", Model.ToList())*@
+
+
+<partial name="Components/_Card" model="Model.Catecories" />
+
+@*<partial name="Components/_Separator" model='"NEW PRODUCT"' />
+
+<partial name="Components/_Separator" model='"Top Seller"' />
+
+<partial name="Components/_Separator" model='"TRENDING"' />
+
+<partial name="Components/_Separator" model='"Product Sale"' />
+
+<partial name="Components/_Separator" model='"Our Posts"' />*@
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+

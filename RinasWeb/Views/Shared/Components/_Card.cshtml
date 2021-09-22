@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Category>
+
+
+<section class="container-fluid card-container">
+    
+    @foreach (var item in Model)
+    {
+        <div class="card item-@(Model.ToList().IndexOf(item)+1)  text-white text-center">
+            <img src="@(string.Format("{0}", item.Image))" class="card-img" alt="...">
+            <div class="card-img-overlay d-flex justify-content-center">
+                <a href="#" class="btn btn-primary align-self-end mb-3 card-btn">@item.Name</a>
+            </div>
+        </div>
+    }
+</section>

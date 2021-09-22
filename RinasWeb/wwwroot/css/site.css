@@ -1,0 +1,212 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+@import "animate.css";
+section {
+    margin-top: 1.5rem;
+}
+.container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+/*Hero*/
+.hero {
+    background-image: url("/img/hero_bg_3.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position:center;
+    /*max-height:80vh;*/
+    text-align:center;
+}
+    .hero div:first-child {
+        background-color: #9696965c;
+        border-radius: 5px;
+        height: fit-content;
+        padding: 1rem;
+        align-self: center;
+    }
+.hero img {
+    width: auto;
+    max-height: 520px;
+    float: right;
+}
+/*Heading*/
+.heading h5, .heading i.fas {
+    color: #d4af37;
+}
+.heading .heading-item {
+    padding: 1rem;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: #ddba76;
+}
+/*Card*/
+.card-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+}
+.card-container > div, .card-container img {
+    border: none;
+    border-radius: 0px;
+    height:100%;
+    overflow:hidden;
+}
+.card-container > .item-1 {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
+
+.card-container > .item-4 {
+    grid-column: 3 / span 2;
+}
+a.card-btn {
+    color:#fff;
+    border-color: #ffffff;
+    border: none;
+    border-radius: 0;
+    padding: 12px 25px;
+    background: linear-gradient( 1deg,#ddba76 50%,#fff 0) no-repeat scroll 100% 100%/100% 210% #fff;
+    transition: all .3s ease-in-out;
+}
+
+a.card-btn:hover {
+    background-color: #f7f7f7;
+    background-position: 100% 0 !important;
+    color: #6a6a6a !important;
+}
+
+/*Separator*/
+.separator {
+    position: relative;
+}
+.separator-item {
+    padding-bottom: 0px !important;
+    text-align: center;
+}
+.separator-item .title {
+    position: relative;
+    padding: 0 20px;
+    z-index: 999;
+    background: rgb(255, 255, 255) none repeat scroll 0 0;
+    display: inline-block;
+    text-transform: uppercase;
+}
+.separator-item::after {
+    background: rgb(230, 230, 230) none repeat scroll 0 0;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    top: 20px;
+    width: 100%;
+}
+/*applies to small devices (landscape phones, less than 768px)*/
+@media (max-width: 767.98px) {
+    .card-container {
+        grid-template-columns: auto auto;
+    }
+
+    .card-container > div {
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
+}
+
+/* applies to x-small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+    /*Hero*/
+    .hero p.description {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .hero div:first-child {
+        font-family: "Unna", Sans-serif;
+        font-size: 80px;
+        font-weight: 700;
+        line-height: 1em;
+        background-color:transparent;
+    }
+    .hero img{
+        max-height:280px;
+        float:none;
+    }
+     /*card*/
+    .card-container {
+        grid-template-columns: auto;
+    }
+    
+}

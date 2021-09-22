@@ -1,0 +1,28 @@
+﻿/****Animation****/
+@keyframes zoomIn {
+
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 0;
+        color: cornflowerblue;
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+        color: white;
+    }
+}
+
+.zoomEffect {
+    -webkit-animation: zoomIn 1.5s linear;
+    animation: zoomIn 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+.card-container > div:hover img {
+    transform: scale(2) rotate( 0.1deg);
+}
+.card-container > div img {
+    transition: transform 9s linear;
+}

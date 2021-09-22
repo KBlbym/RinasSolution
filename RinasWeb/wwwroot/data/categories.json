@@ -1,0 +1,25 @@
+[
+    {
+      "id": 1,
+      "name": "NEW LAUNCH",
+      "image": "/img/pic_1.jpg"
+    },
+  {
+    "id": 2,
+    "name": "HOME FRAGANCE",
+    "image": "/img/pic_3.jpg"
+
+  },
+  {
+    "id": 3,
+    "name": "DAHN AL OUD",
+    "image": "/img/bokhour_1.jpg"
+
+  },
+  {
+    "id": 4,
+    "name": "EN VOUGE",
+    "image": "/img/pic_4.jpg"
+
+  }
+]
