@@ -1,2 +1,4 @@
 #Project
 appsettings.json
+bin/
+obj/
