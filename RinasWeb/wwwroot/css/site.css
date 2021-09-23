@@ -1,6 +1,7 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 @import "animate.css";
+@import "carousel.css";
 section {
     margin-top: 1.5rem;
 }
@@ -168,6 +169,14 @@ a.card-btn:hover {
     position: absolute;
     top: 20px;
     width: 100%;
+}
+/*ProductsCard*/
+.productscard-container img{
+    max-height:262px;
+    width:auto;
+}
+.productscard-container .rating i {
+    color: #ddba76;
 }
 /*applies to small devices (landscape phones, less than 768px)*/
 @media (max-width: 767.98px) {
