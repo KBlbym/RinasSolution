@@ -3,7 +3,10 @@ for details on configuring this project to bundle and minify static web assets. 
 @import "animate.css";
 @import "carousel.css";
 section {
-    margin-top: 1.5rem;
+    margin-bottom:2rem;
+}
+.logo{
+    max-width:100px;
 }
 .container-fluid {
     padding-right: 0px;
@@ -171,13 +174,62 @@ a.card-btn:hover {
     width: 100%;
 }
 /*ProductsCard*/
-.productscard-container img{
-    max-height:262px;
-    width:auto;
+/*.overlay {
+    background-color: rgba(0, 0, 0, 0.15);
+    height: 100%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    display: none;
+}*/
+.card-overlay {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    justify-content: center;
+    align-items: end;
+    padding-bottom: 10px;
+    z-index: 1;
+   /* display: none;*/
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.1s, opacity .5s linear;
 }
+.card-img{
+    position:relative;
+}
+
+.productscard-container .card {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.productscard-container .card img {
+    transform: scale(.7);
+    max-height:262px;
+}
+
 .productscard-container .rating i {
     color: #ddba76;
 }
+
+.productscard-container .card:hover .card-overlay {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: all 1.5s;
+    -moz-transition: all 1.5s;
+    -o-transition: all 1.5s;
+    transition: all 1.5s;
+}
+.productscard-container .card:hover .card-body {
+    z-index: 1;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    transition: all 1.5s;
+}
+
 /*applies to small devices (landscape phones, less than 768px)*/
 @media (max-width: 767.98px) {
     .card-container {

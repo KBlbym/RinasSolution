@@ -15,14 +15,54 @@
         color: white;
     }
 }
+@keyframes opacityEf {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: .7;
+    }
+}
 
 .zoomEffect {
-    -webkit-animation: zoomIn 1.5s linear;
-    animation: zoomIn 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    -webkit-animation: zoomIn 1.3s linear;
+    animation: zoomIn 1.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 .card-container > div:hover img {
     transform: scale(2) rotate( 0.1deg);
 }
 .card-container > div img {
-    transition: transform 9s linear;
+    transition: transform 6s linear;
 }
+
+.productscard-container .card:hover img {
+    transform: scale(1.03);
+    -webkit-transition: all 1.5s;
+    -moz-transition: all 1.5s;
+    -o-transition: all 1.5s;
+    transition: all 1.5s;
+}
+
+.productscard-container .card .bg-animate {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-transition: all 1.5s;
+    -moz-transition: all 1.5s;
+    -o-transition: all 1.5s;
+    transition: all 1.5s;
+}
+.productscard-container .card:hover .bg-animate, .productscard-container .card:focus .bg-animate {
+    position: absolute;
+    -ms-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+    -webkit-animation: opacityEf 2s linear;
+    animation: opacityEf 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
