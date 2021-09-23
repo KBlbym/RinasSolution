@@ -1,7 +1,7 @@
 ﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 // for details on configuring this project to bundle and minify static web assets.
 
-// Write your JavaScript code.
+// multi carousel.
 $(document).ready(function () {
     var itemsMainDiv = ('.MultiCarousel');
     var itemsDiv = ('.MultiCarousel-inner');
@@ -109,6 +109,19 @@ $(document).ready(function () {
 
 });
 
+ //inizilize owlCarousel
+$(document).ready(function () {
+    $(".owl-carousel").owlCarousel({
+        nav:true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        autoplay: true,
+        dots: false,
+        items: 4,
+        loop:true,
+        navText: ["<i class='fas fa-angle-left fa-2x'></i>","<i class='fas fa-angle-right fa-2x'></i>"]
+    });
+});
 
 
 
