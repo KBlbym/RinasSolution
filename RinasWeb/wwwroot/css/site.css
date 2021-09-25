@@ -254,8 +254,19 @@ a.card-btn:hover {
     border-color: #ffffff;
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
 }
-
-
+/*Summary*/
+.summary .row  {
+    background-color: #f2f2f2;
+}
+.summary .img {
+    background-image: url(/img/2.jpeg);
+    background-size: cover;
+    min-height: 242px;
+    max-height: 100%;
+    background-repeat: no-repeat;
+}
+.summary img {
+    width: 100%;
 }
 /*applies to small devices (landscape phones, less than 768px)*/
 @media (max-width: 767.98px) {
@@ -266,6 +277,9 @@ a.card-btn:hover {
     .card-container > div {
         grid-column: auto !important;
         grid-row: auto !important;
+    }
+    .summary .lead {
+        font-size:1rem;
     }
 }
 
