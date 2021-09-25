@@ -118,12 +118,13 @@ body {
     grid-gap: 10px;
     padding: 10px;
 }
-.card-container > div, .card-container img {
-    border: none;
-    border-radius: 0px;
-    height:100%;
-    overflow:hidden;
-}
+ 
+    .card-container > div, .card-container img {
+        border: none;
+        border-radius: 0px;
+        height: 100%;
+        overflow: hidden;
+    }
 .card-container > .item-1 {
     grid-column: 1 / span 2;
     grid-row: 1 / span 2;
@@ -182,6 +183,14 @@ a.card-btn:hover {
     left: 0;
     display: none;
 }*/
+.productscard-container .card {
+    text-align: center;
+    border: none;
+    width:100%;
+    margin:10px;
+    border-bottom: 3px solid #a6a6a6;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+}
 .card-overlay {
     height: 100%;
     position: absolute;
@@ -191,7 +200,8 @@ a.card-btn:hover {
     align-items: end;
     padding-bottom: 10px;
     z-index: 1;
-   /* display: none;*/
+    display: flex;
+    /* display: none;*/
     visibility: hidden;
     opacity: 0;
     transition: visibility 0.1s, opacity .5s linear;
@@ -215,7 +225,7 @@ a.card-btn:hover {
 }
 
 .productscard-container .card:hover .card-overlay {
-    display: flex;
+    /*display: flex;*/
     visibility: visible;
     opacity: 1;
     -webkit-transition: all 1.5s;
@@ -230,6 +240,23 @@ a.card-btn:hover {
     transition: all 1.5s;
 }
 
+/*equipment*/
+
+.equipment .nav-link {
+    color: #acacac;
+}
+.equipment button.nav-link {
+    border-radius:20px;
+}
+.equipment .nav-pills .nav-link.active {
+    color: #353535;
+    background-color: rgb(255, 255, 255);
+    border-color: #ffffff;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+}
 /*applies to small devices (landscape phones, less than 768px)*/
 @media (max-width: 767.98px) {
     .card-container {

@@ -44,8 +44,8 @@
     transition: all 1.5s;
 }
 
-.productscard-container .card .bg-animate {
-    height: 100%;
+.card .bg-animate {
+    
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -55,7 +55,8 @@
     -o-transition: all 1.5s;
     transition: all 1.5s;
 }
-.productscard-container .card:hover .bg-animate, .productscard-container .card:focus .bg-animate {
+.card:hover .bg-animate, .card:focus .bg-animate {
+    height: 100%;
     position: absolute;
     -ms-transform: scale(1.5);
     -moz-transform: scale(1.5);
