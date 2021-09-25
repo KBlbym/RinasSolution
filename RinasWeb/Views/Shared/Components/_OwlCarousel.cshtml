@@ -1,10 +1,26 @@
-﻿<div class="owl-carousel">
-    @for (int i = 1; i < 10; i++)
-    {
-        <div>
-            <span class="position-absolute-center"><i class="fab fa-instagram fa-3x text-white"></i></span>
-            <img src='~/img/products/bokhour/@string.Format("{0}.jpg",i)' />
-        </div>
-    }
+﻿@model IEnumerable<Product>
+
+<div class="owl-carousel">
+    @{
+        if (Model != null)
+        {
+            @foreach (var item in Model)
+            {
+                <partial name="Components/_ProductCard" model='item' />
+            }
+        }
+        else
+        {
+            for (int i = 1; i < 10; i++)
+            {
+                <div>
+                    <span class="position-absolute-center"><i class="fab fa-instagram fa-3x text-white"></i></span>
+                    <img src='~/img/products/bokhour/@string.Format("{0}.jpg", i)' />
+                </div>
+                }
+            }
+
+        }
+
 
 </div>
