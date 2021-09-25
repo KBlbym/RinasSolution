@@ -5,15 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Shared\Components\Carousel\" />
-    <Folder Include="Views\Shared\Components\Card\" />
-    <Folder Include="Views\Shared\Components\Footer\" />
-    <Folder Include="Views\Shared\Components\Header\" />
-    <Folder Include="Views\Shared\Components\Hero\" />
-    <Folder Include="Views\Shared\Components\Navbar\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
   </ItemGroup>
 

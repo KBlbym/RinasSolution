@@ -5,6 +5,14 @@
     {
       "library": "bootstrap@5.1.1",
       "destination": "wwwroot/lib/bootstrap/"
+    },
+    {
+      "library": "slick-carousel@1.8.1",
+      "destination": "wwwroot/lib/slick-carousel/"
+    },
+    {
+      "library": "OwlCarousel2@2.3.4",
+      "destination": "wwwroot/lib/OwlCarousel2/"
     }
   ]
 }

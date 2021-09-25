@@ -1,0 +1,76 @@
+.owl-carousel .owl-nav {
+    color:aliceblue;
+}
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+    position: absolute;
+    top: 45%;
+    /*height: 100%;*/
+    padding: 0px 10px !important;
+    background-color: rgba(0,0,0, .20);
+}
+.owl-carousel .owl-nav > button.owl-prev {
+    left: 0;
+}
+.owl-carousel .owl-nav > button.owl-next {
+    right: 0;
+}
+.owl-carousel span.position-absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    /*display: none;*/
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.1s, opacity .5s linear;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.owl-carousel .owl-item:hover span.position-absolute-center,
+.owl-carousel .owl-item:focus span.position-absolute-center {
+    visibility: visible;
+    opacity: 1;
+    z-index:2;
+}
+.owl-carousel .owl-item > div {
+    overflow:hidden;
+}
+.owl-carousel .owl-item:hover img,
+.owl-carousel .owl-item:focus img {
+    transform: scale(1.1);
+    -webkit-transition: all 1.5s;
+    -moz-transition: all 1.5s;
+    -o-transition: all 1.5s;
+    transition: all 1.5s;
+}
+
+.productscard-container .owl-carousel .owl-stage,
+.productscard-container .owl-carousel .owl-stage .owl-item {
+    display: flex;
+}
+
+
+/*applies to small devices (landscape phones, less than 768px)*/
+@media (max-width: 767.98px) {
+    .owl-carousel .owl-nav button.owl-prev,
+    .owl-carousel .owl-nav button.owl-next {
+        padding: 0px 0px !important;
+        top: 58%;
+    }
+}
+
+/* applies to x-small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+    .owl-carousel .owl-nav button.owl-prev,
+    .owl-carousel .owl-nav button.owl-next {
+        padding: 0px 0px !important;
+        top: 35%;
+    }
+}
+
