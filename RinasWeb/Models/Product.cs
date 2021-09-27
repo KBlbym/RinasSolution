@@ -15,6 +15,7 @@ namespace RinasWeb.Models
         public float Price { get; set; }
         public string Image { get; set; }
         public string Url { get; set; }
+        public int TypeId { get; set; }
         public int[] Ratings { get; set; }
         public DateTime Published { get; set; }
 

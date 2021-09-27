@@ -1,9 +1,9 @@
 [
-    {
-      "id": 1,
-      "name": "NEW LAUNCH",
-      "image": "/img/pic_1.jpg"
-    },
+  {
+    "id": 1,
+    "name": "NEW LAUNCH",
+    "image": "/img/pic_1.jpg"
+  },
   {
     "id": 2,
     "name": "HOME FRAGANCE",
@@ -18,8 +18,12 @@
   },
   {
     "id": 4,
-    "name": "EN VOUGE",
+    "name": "Gift Sets",
+    "image": "https://www.ajmalperfume.com/ajmal_img/ajmal_productcategory/263789038Gift-set382X354.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Celebrity Fragrances",
     "image": "/img/pic_4.jpg"
-
   }
 ]

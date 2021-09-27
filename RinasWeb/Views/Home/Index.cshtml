@@ -10,36 +10,43 @@
 
 <partial name="Components/_Card" model="Model.Catecories" />
 
-<partial name="Components/_Separator" model='"OUR EQUIPMENT"' />
-<section class="container equipment">
-    <ul class="nav nav-pills mb-3 d-flex justify-content-center" id="pills-tab" role="tablist">
-        <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="pills-newproducts-tab" data-bs-toggle="pill" data-bs-target="#pills-newproducts" type="button" role="tab" aria-controls="pills-newproducts" aria-selected="true">New Products</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-topseller-tab" data-bs-toggle="pill" data-bs-target="#pills-topseller" type="button" role="tab" aria-controls="pills-topseller" aria-selected="false">Top Seller</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-trending-tab" data-bs-toggle="pill" data-bs-target="#pills-trending" type="button" role="tab" aria-controls="pills-trending" aria-selected="false">Trending</button>
-        </li>
-    </ul>
-    <div class="tab-content" id="pills-tabContent">
-        <div class="productscard-container tab-pane fade show active" id="pills-newproducts" role="tabpanel" aria-labelledby="pills-newproducts-tab">
-            <partial name="Components/_OwlCarousel" model='Model.Products' />
-        </div>
-        <div class="productscard-container tab-pane fade" id="pills-topseller" role="tabpanel" aria-labelledby="pills-topseller-tab">
-            <partial name="Components/_OwlCarousel" model='Model.Products' />
-        </div>
-        <div class="productscard-container tab-pane fade" id="pills-trending" role="tabpanel" aria-labelledby="pills-trending-tab">
-            <partial name="Components/_OwlCarousel" model='Model.Products' />
-        </div>
+<partial name="Components/_Separator" model='"New Products"' />
+<section class="container productscard-container">
+    <partial name="Components/_OwlCarousel" model='Model.Products.OrderBy(a=>a.Published).Take(10)' />
+</section>
+
+<partial name="Components/_Separator" model='"Best Sellers"' />
+<section class="container productscard-container">
+    <partial name="Components/_OwlCarousel" model='Model.Products' />
+</section>
+
+<partial name="Components/_Summary" model='new { title="BAD BOY (NEW 2021)", description="We are glad to welcome you at our first online store for" +
+                " real perfume connoisseurs. If you want to sell perfumes you should" +
+                " know that nice fragrance is not enough for success.You must tell " +
+                "original story that willgive your perfumes enough charm to attract " +
+                "customers.",url= "#", img="/img/2.jpeg" }' />
+
+<section class="row my-5">
+    <div class="col-md-6">
+        <partial name="Components/_Summary" model='new { title="Mens Fragances", description="",url= "#", img="/img/3.jpg" }' />
+    </div>
+    <div class="col-md-6">
+        <partial name="Components/_Summary" model='new { title="Womens Fragances", description="",url= "#", img="/img/1.jpg" }' />
     </div>
 </section>
 
-<partial name="Components/_Summary" />
+<partial name="Components/_Separator" model='"Celebrity Fragrances"' />
+<section class="container productscard-container">
+    <partial name="Components/_OwlCarousel" model='Model.Products.Where(a=>a.TypeId == 5)' />
+</section>
+
+<partial name="Components/_Separator" model='"Gift Sets"' />
+<section class="container productscard-container">
+    <partial name="Components/_OwlCarousel" model='Model.Products.Where(a=>a.TypeId == 4)' />
+</section>
 
 @*<partial name="Components/_Separator" model='"TRENDING"' />
-
+    
     <partial name="Components/_Separator" model='"Product Sale"' />
 
     <partial name="Components/_Separator" model='"Our Posts"' />*@
@@ -47,7 +54,7 @@
 <section class="text-center">
     <img class="d-block mx-auto logo" src="/img/logo.png" alt="R-inas logo">
     <h2 class=" mb-4"><i class="fab fa-instagram"></i> R-inas on instagram</h2>
-    <div class="col-lg-12 mx-auto">
+    <div class="col-lg-12 mx-auto container-fluid">
         <partial name="Components/_OwlCarousel" model='null' />
     </div>
 </section>

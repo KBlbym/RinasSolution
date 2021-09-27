@@ -66,4 +66,13 @@
     -webkit-animation: opacityEf 2s linear;
     animation: opacityEf 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
+.card:hover .bg-animate::after, .card:focus .bg-animate::after {
+    content:'';
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background-color:rgba(0,0,0,.5);
+}
 

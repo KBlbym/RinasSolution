@@ -1,14 +1,30 @@
-﻿<section class="summary container">
+﻿@model dynamic
+@{ 
+    
+    var obj = new 
+    {
+        title = "BAD BOY (NEW 2021)",
+        description = "We are glad to welcome you at our first online store for" +
+                " real perfume connoisseurs. If you want to sell perfumes you should" +
+                " know that nice fragrance is not enough for success.You must tell " +
+                "original story that willgive your perfumes enough charm to attract " +
+                "customers.",
+        img = "/img/2.jpeg"
+    };
+}
+<section class="summary container">
     <div class="row gx-0">
-        <div class="col-md-6 img">
+        <div class="col-md-6 img" style="background-image: url(@Model.img);">
+
         </div>
-        <div class="col-md-6 p-4">
-            <h2 class=" fw-bold lh-1 mb-3">BAD BOY (NEW 2020)</h2>
-            <p class="lead">We are glad to welcome you at our first online store for real perfume connoisseurs. If you want to sell perfumes you should know that 
-            nice fragrance is not enough for success. You must tell original story that will
-            give your perfumes enough charm to attract customers.</p>
+        <div class="col-md-6 p-2 d-flex flex-column justify-content-center align-items-center">
+            <h2 class=" fw-bold lh-1 mb-3 text-center">@Model.title</h2>
+            @if (!string.IsNullOrEmpty(Model.description))
+            {
+                <p class="lead">@Model.description</p>
+            }
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                <a href="#" class="btn btn-primary align-self-end mb-3 card-btn">View all collection</a>
+                <a href="@Model.url" class="btn btn-primary align-self-end mb-3 card-btn">View all collection</a>
             </div>
         </div>
 

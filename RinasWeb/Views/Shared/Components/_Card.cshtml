@@ -4,7 +4,7 @@
     
     @foreach (var item in Model)
     {
-        <div class="card item-@(Model.ToList().IndexOf(item)+1)  text-white text-center">
+        <div class="card grid-@(Model.ToList().IndexOf(item)+1)  text-white text-center">
             <img src="@(string.Format("{0}", item.Image))" class="card-img" alt="@item.Name">
             <div class="card-img-overlay d-flex justify-content-center">
                 <a href="#" class="btn btn-primary align-self-end mb-3 card-btn">@item.Name</a>
