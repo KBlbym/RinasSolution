@@ -3,28 +3,27 @@
 
  //inizilize owlCarousel card-carousel
 $(document).ready(function () {
+
     $(".owl-carousel").owlCarousel({
-        nav:true,
         autoplayTimeout: 3000,
         autoplayHoverPause: true,
         autoplay: false,
-        dots: false,
-        items: 4,
-        loop:true,
-        navText: ["<i class='fas fa-angle-left fa-2x'></i>", "<i class='fas fa-angle-right fa-2x'></i>"],
+        nav: true,
+        dots: true,
+        items: 5,
+        navText: ["<i class='fas fa-angle-left fa-3x'></i>", "<i class='fas fa-angle-right fa-3x'></i>"],
         responsiveClass: true,
         responsive: {
             0: {
-                items: 1,
+                items: 2,
                 nav: false,
-                dots: true,
             },
             600: {
-                items: 3,
+                items: 4,
                 nav: true
             },
             1000: {
-                items: 4,
+                items: 5,
                 nav: true,
             }
         }

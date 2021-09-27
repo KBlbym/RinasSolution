@@ -3,7 +3,8 @@ for details on configuring this project to bundle and minify static web assets. 
 @import "animate.css";
 @import "carousel.css";
 section {
-    margin-bottom:2rem;
+    margin-bottom: 2.25rem;
+    margin-top: 0.5rem;
 }
 .logo{
     max-width:100px;
@@ -114,7 +115,7 @@ body {
 /*Card*/
 .card-container {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto auto ;
     grid-gap: 10px;
     padding: 10px;
 }
@@ -125,16 +126,29 @@ body {
         height: 100%;
         overflow: hidden;
     }
-.card-container > .item-1 {
+.card-container > .grid-1 {
     grid-column: 1 / span 2;
     grid-row: 1 / span 2;
 }
 
-.card-container > .item-4 {
+
+.card-container > .grid-4 {
     grid-column: 3 / span 2;
+    grid-row: 2/ span 3;
 }
+.card-container > .grid-4 {
+    grid-column: 3 / span 2;
+    grid-row: 2/ span 3;
+}
+.card-container > .grid-5 {
+    grid-row: 3 /span 2;
+    grid-column: span 2;
+}
+
+
+
 a.card-btn {
-    color:#fff;
+    color: #fff;
     border-color: #ffffff;
     border: none;
     border-radius: 0;
@@ -187,7 +201,6 @@ a.card-btn:hover {
     text-align: center;
     border: none;
     width:100%;
-    margin:10px;
     border-bottom: 3px solid #a6a6a6;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
 }
@@ -222,9 +235,17 @@ a.card-btn:hover {
 
 .productscard-container .rating i {
     color: #ddba76;
+    font-size: 8pt;
+}
+.productscard-container .card .card-body {
+    flex:none;
+    padding:5px 3px;
+}
+.productscard-container .card .card-body h4 {
+    margin-bottom: 0px;
 }
 
-.productscard-container .card:hover .card-overlay {
+    .productscard-container .card:hover .card-overlay {
     /*display: flex;*/
     visibility: visible;
     opacity: 1;
@@ -240,15 +261,15 @@ a.card-btn:hover {
     transition: all 1.5s;
 }
 
-/*equipment*/
+/*Tabs group buttons*/
 
-.equipment .nav-link {
+.tabs-group-btn .nav-link {
     color: #acacac;
 }
-.equipment button.nav-link {
-    border-radius:20px;
+.tabs-group-btn button.nav-link {
+    border-radius: 20px;
 }
-.equipment .nav-pills .nav-link.active {
+.tabs-group-btn .nav-pills .nav-link.active {
     color: #353535;
     background-color: rgb(255, 255, 255);
     border-color: #ffffff;
@@ -259,7 +280,6 @@ a.card-btn:hover {
     background-color: #f2f2f2;
 }
 .summary .img {
-    background-image: url(/img/2.jpeg);
     background-size: cover;
     min-height: 242px;
     max-height: 100%;

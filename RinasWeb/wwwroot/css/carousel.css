@@ -4,16 +4,27 @@
 .owl-carousel .owl-nav button.owl-prev,
 .owl-carousel .owl-nav button.owl-next {
     position: absolute;
-    top: 45%;
-    /*height: 100%;*/
-    padding: 0px 10px !important;
-    background-color: rgba(0,0,0, .20);
+    top: 0;
+    bottom: 35px;
+    color: #a9a9a9;
 }
-.owl-carousel .owl-nav > button.owl-prev {
+.container > .owl-carousel .owl-nav > button.owl-prev {
+    left: -10px;
+}
+.container > .owl-carousel .owl-nav > button.owl-next {
+    right: -10px;
+}
+.container-fluid > .owl-carousel .owl-nav > button.owl-prev {
     left: 0;
 }
-.owl-carousel .owl-nav > button.owl-next {
+
+.container-fluid > .owl-carousel .owl-nav > button.owl-next {
     right: 0;
+}
+.owl-theme .owl-nav [class*=owl-]:hover {
+    background: none;
+    color: #5b5b5b;
+    text-decoration: none;
 }
 .owl-carousel span.position-absolute-center {
     position: absolute;
@@ -43,7 +54,7 @@
 }
 .owl-carousel .owl-item:hover img,
 .owl-carousel .owl-item:focus img {
-    transform: scale(1.1);
+    transform: scale(1);
     -webkit-transition: all 1.5s;
     -moz-transition: all 1.5s;
     -o-transition: all 1.5s;
