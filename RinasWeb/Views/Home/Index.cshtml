@@ -20,20 +20,28 @@
     <partial name="Components/_OwlCarousel" model='Model.Products' />
 </section>
 
-<partial name="Components/_PageContent" model='new { title="BAD BOY (NEW 2021)", description="We are glad to welcome you at our first online store for" +
+<section class="container">
+    <partial name="Components/_PageContent" model='new { title="BAD BOY (NEW 2021)", description="We are glad to welcome you at our first online store for" +
                 " real perfume connoisseurs. If you want to sell perfumes you should" +
                 " know that nice fragrance is not enough for success.You must tell " +
                 "original story that willgive your perfumes enough charm to attract " +
                 "customers.",url= "#", img="/img/2.jpeg" }' />
-
-<section class="row my-5">
-    <div class="col-md-6">
-        <partial name="Components/_PageContent" model='new { title="Mens Fragances", description="",url= "#", img="/img/3.jpg" }' />
-    </div>
-    <div class="col-md-6">
-        <partial name="Components/_PageContent" model='new { title="Womens Fragances", description="",url= "#", img="/img/1.jpg" }' />
-    </div>
 </section>
+<section class="container py-3">
+    <div class="row">
+        <div class="col-md-6">
+            <partial name="Components/_PageContent" model='new { title="Mens Fragances", description="",url= "#", img="/img/3.jpg" }' />
+        </div>
+
+        <div class="col-md-6">
+            <partial name="Components/_PageContent" model='new { title="Womens Fragances", description="",url= "#", img="/img/1.jpg" }' />
+        </div>
+    </div>
+
+</section>
+
+
+
 
 <partial name="Components/_Separator" model='"Celebrity Fragrances"' />
 <section class="container productscard-container">
@@ -45,7 +53,8 @@
     <partial name="Components/_OwlCarousel" model='Model.Products.Where(a=>a.TypeId == 4)' />
 </section>
 
-<partial name="Components/_Summary" model='new { title="Legacy", img="/img/banner_2.jpg", description="One of Morocco’s Largest Fragrance Retailer, R-inas specializes in the sale of genuine designer fragrances and related products at competitive prices." }' />
+<partial name="Components/_Summary" model='new { type="", title="Legacy", img="/img/banner_2.jpg", description="One of Morocco’s Largest Fragrance Retailer, R-inas specializes in the sale of genuine designer fragrances and related products at competitive prices." }' />
+
 
 @*<partial name="Components/_Separator" model='"TRENDING"' />
 
@@ -60,5 +69,7 @@
         <partial name="Components/_OwlCarousel" model='null' />
     </div>
 </section>
+<partial name="Components/_Summary" model='new { type="form", title="Get Update", img="/img/banner_1.jpg", description="Subscribe our newsletter and get discount 30% off." }' />
+
 
 
