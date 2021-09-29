@@ -2,6 +2,16 @@
 for details on configuring this project to bundle and minify static web assets. */
 @import "animate.css";
 @import "carousel.css";
+.overlay::after {
+    content: '';
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
+    background-image: linear-gradient(transparent, rgb(0 0 0 / 89%));
+}
 section {
     margin-bottom: 2.25rem;
     margin-top: 0.5rem;
@@ -275,6 +285,7 @@ a.card-btn:hover {
     border-color: #ffffff;
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
 }
+
 /*page-content*/
 .page-content .row  {
     background-color: #f2f2f2;
@@ -287,6 +298,18 @@ a.card-btn:hover {
 }
 .page-content img {
     width: 100%;
+}
+
+
+/*Summary */
+.summary {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding: 1rem;
+    z-index:0;
+    position:relative;
 }
 /*applies to small devices (landscape phones, less than 768px)*/
 @media (max-width: 767.98px) {
