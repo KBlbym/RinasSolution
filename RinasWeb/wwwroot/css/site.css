@@ -184,6 +184,11 @@ a.card-btn:hover {
 .separator-item {
     padding-bottom: 0px !important;
     text-align: center;
+    position:relative;
+}
+.separator-item a.show-all {
+    position:absolute;
+    right:0;
 }
 .separator-item .title {
     position: relative;
