@@ -82,7 +82,7 @@ html {
 
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 60px;
+  margin-bottom: 0px;
 }
 .footer {
   position: absolute;
@@ -113,8 +113,12 @@ body {
     float: right;
 }
 /*Heading*/
-.heading h5, .heading i.fas {
-    color: #d4af37;
+.heading h5, .heading i.fas, footer .footer-item i.fab {
+    color: #ddba76;
+}
+footer .footer-item i.fab:hover,
+footer .footer-item i.fab:focus {
+    color: #eacc9e;
 }
 .heading .heading-item {
     padding: 1rem;
@@ -311,6 +315,24 @@ a.card-btn:hover {
     z-index:0;
     position:relative;
 }
+/*myfooter*/
+.myfooter {
+    background-image: linear-gradient(rgb(0 0 0 / 86%), rgb(0 0 0 / 86%)), url(/img/banner_4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.myfooter h5 {
+    color: white;
+}
+    .myfooter .title::after {
+        content: '';
+        display: block;
+        height: 2px;
+        width: 40px;
+        margin-top: 15px;
+        background-color: #fff;
+    }
 /*applies to small devices (landscape phones, less than 768px)*/
 @media (max-width: 767.98px) {
     .card-container {
